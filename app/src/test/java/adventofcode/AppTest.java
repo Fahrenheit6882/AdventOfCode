@@ -7,8 +7,22 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+
+    public Integer negativeModulus(Integer x) {
+        // How can we implement this to make -4 mod 100 return 96?
+        return x % 100;
+    }
+
     @Test void appHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    }
+
+    @Test void modulusOperation() {
+        assertEquals(4, 104%100, "104 mod 100 should be 4");
+        assertEquals(4, 204%100, "204 mod 100 should be 4");
+        assertEquals(-4, -4%100, "-4 mod 100 should be -4");
+        // Uncomment this line to see the test fail, then try to implement the negativeModulus method above
+        //assertEquals(96, negativeModulus(-4), "custom negative modulus of -4 should be 96");
     }
 }
