@@ -9,6 +9,40 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
+        Character d = 'd';
+        Strings name = "Advent of Code";
+
+        String[] input = {
+            "L68",
+            "L30",
+            "R48",
+            "L5",
+            "R60",
+            "L55",
+            "L1", 
+            "L99",
+            "R14",
+            "L82",
+        };
+        
+        Integer position = 50;
+
+        for (String rotation : input) {
+            char direction = rotation.charAt(0);
+            Integer distance = Integer.parseInt(rotation.substring(1));
+            if (direction == 'L') {
+                position -= distance;
+            } else if (direction == 'R') {
+                position += distance;
+            }
+            position = (position + 100) % 100; // Wrap around using modulus
+            System.out.println("Current position: " + position);
+        }
+
+
+
+
+
     }
 }

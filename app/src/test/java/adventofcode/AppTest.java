@@ -14,8 +14,12 @@ class AppTest {
     }
 
     @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+        App myApp = new App();
+        assertNotNull(myApp.getGreeting(), "app should have a greeting");
+    }
+
+    @Test void testAdding() {
+        assertEquals(3, 1+1);
     }
 
     @Test void modulusOperation() {
