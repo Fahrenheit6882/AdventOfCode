@@ -10,8 +10,11 @@ public class App {
 
     public static void main(String[] args) {
 
+        // Characters use single quotes
         Character d = 'd';
-        Strings name = "Advent of Code";
+        
+        // Strings use double quotes
+        String name = "Advent of Code";
 
         String[] input = {
             "L68",

@@ -19,7 +19,7 @@ class AppTest {
     }
 
     @Test void testAdding() {
-        assertEquals(3, 1+1);
+        assertEquals(2, 1+1);
     }
 
     @Test void modulusOperation() {
